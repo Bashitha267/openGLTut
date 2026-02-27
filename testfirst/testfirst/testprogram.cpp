@@ -2,10 +2,10 @@
 #include <glut.h>
 
 void init()
-{
+{                 //r   g     b  0.0-1.0
 	glClearColor (1.0, 0.0, 0.0, 1.0);
-
-	glColor3f(1.0, 1.0, 1.0); 
+			  //r	g	b  0.0-1.0
+	glColor3f(1.0, 1.0, 0.0); 
 
 	glMatrixMode (GL_PROJECTION);    
 	glLoadIdentity ();    
@@ -15,6 +15,7 @@ void init()
 
 void mydisplay(){
     glClear(GL_COLOR_BUFFER_BIT); 
+	//we use primitive GL_Polygon refer the tutorial.
 	glBegin(GL_POLYGON);        
 		glVertex2f(-0.5, -0.5);        
 		glVertex2f(-0.5, 0.5);        
@@ -62,8 +63,8 @@ int main(int argc, char** argv){
 	glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);  
 	glutInitWindowSize(500,500);
 	glutInitWindowPosition(0,0);
-	glutCreateWindow("simple");     
-	glutDisplayFunc(mydisplay4);  
+	glutCreateWindow("Test");     
+	glutDisplayFunc(mydisplay);  
 	init();  
 	glutMainLoop();
 }
