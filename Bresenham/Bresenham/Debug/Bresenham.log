@@ -1,4 +1,4 @@
-﻿Build started 3/6/2026 11:25:16 AM.
+﻿Build started 3/6/2026 11:34:30 AM.
      1>Project "C:\Users\DCSUSER\Desktop\23\openGLTut\Bresenham\Bresenham\Bresenham.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\Bresenham.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -18,4 +18,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.45
+Time Elapsed 00:00:00.44

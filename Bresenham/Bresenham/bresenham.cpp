@@ -126,8 +126,6 @@ void ddaline(int xi,int yi,int xf,int yf){
 	}
 }
 
-
-
 void mouse(int btn, int state, int x, int y)
 {
 	if (btn == GLUT_LEFT_BUTTON)
@@ -158,6 +156,7 @@ void myinit()
      gluOrtho2D(0.0,(GLdouble)ww,0.0,(GLdouble)wh);  
      glMatrixMode(GL_MODELVIEW);  
 }  
+
 int main(int argc, char** argv)  
 {  
      glutInit(&argc,argv);  
