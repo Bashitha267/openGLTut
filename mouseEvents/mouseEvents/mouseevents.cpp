@@ -1,5 +1,5 @@
 #include <glut.h>
-#include <stdio.h>
+#include <stdio.h>    //printing input and outputs.standard input and output
 
 int ww = 600, wh = 400;
 int xi, yi, xf, yf;
@@ -16,13 +16,25 @@ void drawLine(GLint x1, GLint y1, GLint x2, GLint y2)
 	float m = (y2 - y1) / (float)(x2 - x1);
 	float c = y1 - x1 * m;
 	printf("m = %f   ,    c = %f \n", m, c);
-
+	if(x1<x2){
 	for (GLint x = x1 + 1; x <= x2; x++) {
 		y = m * x + c;
 		glVertex2i(x, y);	//plotting points
 	}
 
 	glEnd();
+	
+	}
+	else {
+	for (GLint x = x2 + 1; x <= x1; x++) {
+		y = m * x + c;
+		glVertex2i(x, y);	//plotting points
+	}
+	glEnd();
+	}
+
+
+	
 }
 
 void display()
@@ -34,14 +46,17 @@ void display()
 void mouse(int btn, int state, int x, int y)
 {
 	if (btn == GLUT_LEFT_BUTTON)
-		if (state == GLUT_DOWN)
+		if (state == GLUT_DOWN)//this is the user click point
 		{
 			xi = x;
 			yi = (wh - y);
+			//yi = (y)
 		}
-		else if (state == GLUT_UP) {
+		else if (state == GLUT_UP) { //this is releasing the mouse point
 			xf = x;
 			yf = (wh - y);
+			//yf = (y);
+
 			glutPostRedisplay();
 		}
 	if (btn == GLUT_RIGHT_BUTTON) {
