@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "keyboard", "keyboard\keyboard.vcxproj", "{E1CDAC97-4242-4CA9-95B4-A9851C8F96C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1CDAC97-4242-4CA9-95B4-A9851C8F96C6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E1CDAC97-4242-4CA9-95B4-A9851C8F96C6}.Debug|Win32.Build.0 = Debug|Win32
+		{E1CDAC97-4242-4CA9-95B4-A9851C8F96C6}.Release|Win32.ActiveCfg = Release|Win32
+		{E1CDAC97-4242-4CA9-95B4-A9851C8F96C6}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
