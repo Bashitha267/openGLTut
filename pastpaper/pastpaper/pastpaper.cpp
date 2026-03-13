@@ -25,7 +25,7 @@ void putPixelcircle (int x, int y)
 	return;
 	}
 } 
- 
+
  
 void display()  
 {  
@@ -48,6 +48,18 @@ void plotCircle(int h, int k, int x, int y)
 
 }
 
+void plotCir(int h, int k, int x, int y)
+{
+	putPixel((x+h), (y+k)); //x,y
+	putPixel((y+h), (x+k));//y, x
+	putPixel((-y+h), (x+k));//-y, x
+	putPixel((-x+h), (y+k));//-x, y
+	putPixel((-x+h), (-y+k));//-x,-y
+	putPixel((-y+h), (-x+k));//-y,-x
+	putPixel((y+h), (-x+k));//y,-x
+	putPixel((x+h), (-y+k));//x,-y
+
+}
 void bresenhamCircle(int h, int k, int r)
 {
 	int x=0, y=r, d= 3-2*r;
@@ -158,6 +170,10 @@ void myloop(){
 
 
 }
+void mycir(){
+	bresenhamCircle(200,200,100);
+}
+
 void mycircle(){
 	bresenhamCircle(250,287,100);
 	bresenhamCircle(300,200,100);
@@ -180,7 +196,7 @@ void mouse(int btn, int state, int x, int y)
 			xf = x;
 			yf = (wh - y);
 			glutPostRedisplay();
-			myloop();
+			mycir();
 			mycircle();
 
 			
